@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Biodata from './Biodata/Biodata';
 import ComfortPage from './ComfortPage/ComfortPage';
 import Opening from './Opening/Opening';
+import Arausal from './Arausal/Arausal';
 
  const Form = () => {
     const [formData, setFormData] = useState({
@@ -34,6 +35,24 @@ import Opening from './Opening/Opening';
         Langgam3: '',
         Langgam4: '',
         Langgam5: '',
+        ArausalLayout1: '',
+        ArausalLayout2: '',
+        ArausalLayout3: '',
+        ArausalVariasiJenisRuang1: '',
+        ArausalVariasiJenisRuang2: '',
+        ArausalVariasiJenisRuang3: '',
+        ArausalHirarkiVisual1: '',
+        ArausalHirarkiVisual2: '',
+        ArausalHirarkiVisual3: '',
+        ArausalAreaPersonal1: '',
+        ArausalAreaPersonal2: '',
+        ArausalAreaPersonal3: '',
+        ArausalPencahayaan1: '',
+        ArausalPencahayaan2: '',
+        ArausalPencahayaan3: '',
+        ArausalLanggam1: '',
+        ArausalLanggam2: '',
+        ArausalLanggam3: '',
     });
 
     const [currentPage, setCurrentPage] = useState(0);
@@ -46,8 +65,8 @@ import Opening from './Opening/Opening';
             ...prevData,
             [name]: value,
         }));
-        console.log(formData)
     };
+
     const handleNextPages = (e) => {
         e.preventDefault();
         if(currentPage < 3){
@@ -115,6 +134,7 @@ import Opening from './Opening/Opening';
                             { currentPage == 0 && <Opening /> }
                             { currentPage===1 && <Biodata /> }
                             { currentPage == 2 && <ComfortPage /> }
+                            { currentPage == 3 && <Arausal /> }
                         </form>
 
                         <div className="d-flex justify-content-between px-1 pt-4">
