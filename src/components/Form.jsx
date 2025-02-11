@@ -8,7 +8,32 @@ import Opening from './Opening/Opening';
     const [formData, setFormData] = useState({
         nama: '',
         umur: '',
-        jenisKelamin: ''
+        jenisKelamin: '',
+        Layout1: '',
+        Layout2: '',
+        Layout3: '',
+        Layout4: '',
+        VariasiJenisRuang1: '',
+        VariasiJenisRuang2: '',
+        VariasiJenisRuang3: '',
+        HirarkiVisual1: '',
+        HirarkiVisual2: '',
+        HirarkiVisual3: '',
+        HirarkiVisual4: '',
+        AreaPersonal1: '',
+        AreaPersonal2: '',
+        AreaPersonal3: '',
+        AreaPersonal4: '',
+        AreaPersonal5: '',
+        Pencahayaan1: '',
+        Pencahayaan2: '',
+        Pencahayaan3: '',
+        Pencahayaan4: '',
+        Langgam1: '',
+        Langgam2: '',
+        Langgam3: '',
+        Langgam4: '',
+        Langgam5: '',
     });
 
     const [currentPage, setCurrentPage] = useState(0);
