@@ -6,6 +6,7 @@ import Opening from './Opening/Opening';
 import Arausal from './Arausal/Arausal';
 import DominancePage from './DominancePage/DominancePage';
 import style from './style.module.css';
+import Music from './Music/MusicPlayer';
 
   const Form = () => {
     const [formData, setFormData] = useState({
@@ -111,7 +112,8 @@ import style from './style.module.css';
             CompleteformData.append(key, value);
         })
         if (!validateForm()) {
-            alert(`Harap isi semua kolom berikut:${emptyFields.join(', ')}`);
+            // alert(`Harap isi semua kolom berikut:${emptyFields.join(', ')}`);
+            alert('Masih ada yang belum terisi')
             console.log(emptyFields)
             return;
         }
@@ -142,32 +144,33 @@ import style from './style.module.css';
     return (
         <FormContext.Provider value={{ formData, setFormData, currentPage, handleChange }}>
             <body className={`${style.bg} h-100 `}>
-                    <div className={`container py-5 ${currentPage == 1 ? 'd-flex flex-wrap flex-column vh-100  justify-content-center px-3' : ''}`}>
+                <div className={`container py-5 ${currentPage == 1 ? 'd-flex flex-wrap flex-column vh-100  justify-content-center px-3' : ''}`}>
 
-                        <form name="survey-fachri" id="form" className="form-wrapper row py-1" method="post">
-                            { currentPage == 0 && <Opening /> }
-                            { currentPage ==1 && <Biodata /> }
-                            { currentPage == 2 && <ComfortPage /> }
-                            { currentPage == 3 && <Arausal /> }
-                            { currentPage == 4 && <DominancePage /> }
-                            
-                        </form>
+                    <form name="survey-fachri" id="form" className={`form-wrapper row py-1 ${style.glass} mx-2 py-5 px-3`} method="post">
+                        { currentPage == 0 && <Opening /> }
+                        { currentPage ==1 && <Biodata /> }
+                        { currentPage == 2 && <ComfortPage /> }
+                        { currentPage == 3 && <Arausal /> }
+                        { currentPage == 4 && <DominancePage /> }
+                        
+                    </form>
 
-                        <div className={`d-flex px-1 pt-4 ${currentPage === 0 ? 'justify-content-center' : 'justify-content-between' }`}>
-                            <a className={`btn btn-primary ${currentPage === 0 ? 'd-none' : ''}`} role="button" onClick={ handlePrevPages } >hal</a>
-                            
-                            {currentPage == 4 ? 
-                                <div className="d-flex flex-column align-items-end position-relative">
-                                    <a href='blank' type="submit" className={` rounded-2 border-0 text-white fw-semibold btn ${isLoading ? 'disabled' : '' } btn btn-light`} aria-disabled="true" onClick={ handleSubmit }>
-                                        { isLoading ? <span className="spinner-border spinner-border-sm p-0" role="status"></span> : <p className="mb-0 text-black p-0">Submit</p> }
-                                    </a>
-                                    { isSuccess && <p className="position-relative bg-text-primary">Berhasil</p> }
-                                </div> 
-                                    : 
-                                <a className={`btn btn-primary `} role="button" onClick={ handleNextPages }>{currentPage === 0 ? 'Mulai' : 'Selanjutnya'}</a>
-                            }
-                        </div>
+                    <div className={`d-flex px-1 pt-4 ${currentPage === 0 ? 'justify-content-center' : 'justify-content-between' }`}>
+                        <a className={`btn  ${currentPage === 0 ? 'd-none' : ''} ${style.glass} text-black px-3 fw-semibold`} role="button" onClick={ handlePrevPages } >Sebelum</a>
+                        
+                        {currentPage == 4 ? 
+                            <div>
+                                <a href='blank' type="submit" className={` px-3 border-0 fw-semibold btn ${isLoading ? 'disabled' : '' } btn ${style.glass}`} aria-disabled="true" role='button' onClick={ handleSubmit }>
+                                    { isLoading ? <span className="spinner-border spinner-border-sm p-0" role="status"></span> : <p className="mb-0 text-black p-0">Submit</p> }
+                                </a>
+                                { isSuccess && <p className="position-relative bg-text-primary">Berhasil</p> }
+                            </div> 
+                                : 
+                            <a className={`btn ${style.glass} text-black px-3 fw-semibold`} role="button" onClick={ handleNextPages }>{currentPage === 0 ? 'Mulai Survey' : 'Selanjutnya'}</a>
+                        }
                     </div>
+                    <Music />
+                </div>
             </body>
         </FormContext.Provider>
     )

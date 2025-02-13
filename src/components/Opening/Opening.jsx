@@ -57,7 +57,7 @@ const Opening = () => {
   ]
   const {setFormData, formData, currentPage} = useContext(FormContext);
   return (
-    <section>
+    <section className="">
       <div  className="container">
         <p className="fs-1 fw-bold text-center">KUISIONER PENELITIAN</p>
         <p className="fs-5 fw-semibold text-center border-top border-bottom py-2">“ANALISIS TINGKAT ADAPTASI PENGUNJUNG GENERASI Z TERHADAP KUALITAS ELEMEN INTERIOR GEDUNG DINAS PERPUSTAKAAN DAN KEARSIPAN KABUPATEN”</p>
