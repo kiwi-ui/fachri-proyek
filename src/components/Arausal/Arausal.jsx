@@ -81,16 +81,13 @@ const Arausal = () => {
 ]
   return (
     <section className="">
+      <h3 className="fw-bold text-center">Arausal (gairah)</h3>
+      <p className="text-center fw-normal mb-3">Arausal (gairah) Pada sesi ini akan berfokus pada poin gairah saat beraktifikas di Dinas Perpustakaan dan Kearsipan Kabupaten Pamekasan, berdasar pernyataan dibawah ini pilihlah angka yang mewakili persepsi gairah anda saat berada di perpustakaan tersebut. </p>
       { questions.map((survey, index) => 
-        <div key={survey.id} className='py-2'>
-          <div className="d-flex gap-3 ms-1">
-            <p>
-              {index +1}
-            </p>
+        <div key={survey.id} className='py-2 border-top mb-2'>
           <p className="text-black">
              {survey.question}
           </p>
-          </div>
 
           <div className="col-12 mb-2 row px-3">
             <div className="form-check">

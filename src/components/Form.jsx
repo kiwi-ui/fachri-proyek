@@ -89,7 +89,7 @@ import style from './style.module.css';
         if(currentPage < 5){
             setCurrentPage(page => page + 1);
         }else {
-            setCurrentPage(5)
+            setCurrentPage(4)
         }
     }
 
@@ -142,7 +142,7 @@ import style from './style.module.css';
     return (
         <FormContext.Provider value={{ formData, setFormData, currentPage, handleChange }}>
             <body className={`${style.bg} h-100 `}>
-                    <div className={`container py-5`}>
+                    <div className={`container py-5 ${currentPage == 1 ? 'd-flex flex-wrap flex-column vh-100  justify-content-center px-3' : ''}`}>
 
                         <form name="survey-fachri" id="form" className="form-wrapper row py-1" method="post">
                             { currentPage == 0 && <Opening /> }
@@ -154,12 +154,12 @@ import style from './style.module.css';
                         </form>
 
                         <div className={`d-flex px-1 pt-4 ${currentPage === 0 ? 'justify-content-center' : 'justify-content-between' }`}>
-                            <a className={`btn btn-primary ${currentPage == 0 ? 'd-none' : ''}`} role="button" onClick={ handlePrevPages }>Kembali</a>
+                            <a className={`btn btn-primary ${currentPage === 0 ? 'd-none' : ''}`} role="button" onClick={ handlePrevPages } >hal</a>
                             
                             {currentPage == 4 ? 
-                                <div className="pt-4 w-100 d-flex flex-column align-items-end position-relative">
-                                    <a href='blank' type="submit" className={`py-2 px-4 position-relative rounded-2 border-0 text-white fw-semibold btn ${isLoading ? 'disabled' : '' } btn btn-light`} aria-disabled="true" onClick={ handleSubmit }>
-                                        { isLoading ? <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> : <p className="mb-0 text-black">Submit</p> }
+                                <div className="d-flex flex-column align-items-end position-relative">
+                                    <a href='blank' type="submit" className={` rounded-2 border-0 text-white fw-semibold btn ${isLoading ? 'disabled' : '' } btn btn-light`} aria-disabled="true" onClick={ handleSubmit }>
+                                        { isLoading ? <span className="spinner-border spinner-border-sm p-0" role="status"></span> : <p className="mb-0 text-black p-0">Submit</p> }
                                     </a>
                                     { isSuccess && <p className="position-relative bg-text-primary">Berhasil</p> }
                                 </div> 

@@ -37,16 +37,13 @@ const DominancePage = () => {
 ]
   return (
     <section className="px-3">
-      { questions.map((survey, index) => 
-        <div key={survey.id} className='py-2'>
-          <div className="d-flex gap-3 ms-1">
-            <p>
-              {index +1}
-            </p>
+      <h3 className="fw-bold text-center">Domminance (Perilaku)</h3>
+      <p className="text-center fw-normal mb-3">Pada sesi ini akan berfokus pada poin perilaku dari kondisi Dinas Perpustakaan dan Kearsipan Kabupaten Pamekasan, berdasar pernyataan dibawah ini pilihlah angka yang mewakili persepsi anda terhadap perilaku perpustakaan tersebut. </p>
+      { questions.map((survey) => 
+        <div key={survey.id} className='py-2 border-top mb-2'>
           <p className="text-black">
              {survey.question}
           </p>
-          </div>
 
           <div className="col-12 mb-2 row px-3">
             <div className="form-check">
@@ -68,7 +65,7 @@ const DominancePage = () => {
           </div>
         </div>
       )}
-      <div className="form-floating">
+      <div className="form-floating mb-4">
         <p>{ questions[questions.length-1].question }</p>
         <textarea className="form-control" style={{height: '100px'}} name={ questions[questions.length-1].id } id=""></textarea>
       </div>

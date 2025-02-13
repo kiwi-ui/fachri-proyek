@@ -58,10 +58,10 @@ const Opening = () => {
   const {setFormData, formData, currentPage} = useContext(FormContext);
   return (
     <section>
-      <div>
+      <div  className="container">
         <p className="fs-1 fw-bold text-center">KUISIONER PENELITIAN</p>
-        <p className="fs-5 text-center">“ANALISIS TINGKAT ADAPTASI PENGUNJUNG GENERASI Z TERHADAP KUALITAS ELEMEN INTERIOR GEDUNG DINAS PERPUSTAKAAN DAN KEARSIPAN KABUPATEN”</p>
-        <p className='text-center'>
+        <p className="fs-5 fw-semibold text-center border-top border-bottom py-2">“ANALISIS TINGKAT ADAPTASI PENGUNJUNG GENERASI Z TERHADAP KUALITAS ELEMEN INTERIOR GEDUNG DINAS PERPUSTAKAAN DAN KEARSIPAN KABUPATEN”</p>
+        <p className='text-center border-bottom pb-2'>
           Dinas Perpustakaan dan Kearsipan Kabupaten Pamekasan adalah perpustakaan pertama di Kabupaten Pamekasan, berdiri pada tahun 1986 yang kemudian mendapat renovasi pada tahun 2008. Sebagai Lembaga satu-satunya yang bergerak di bidang perpustakaan dan kearsipan Dinas perpustakaan dan Kearsipan Kabupaten Pamekasan mengalami penurunan pengunjung dari 66.307 pada tahun 2022 ke 39.721 pada tahun 2023 (Diskominfo, 2023). Hingga bulan maret 2023 gedung fasilitas utama Dinas Perpustakaan dan Kearsipan Kabupaten Pamekasan mengalami re-desain secara total. Berikut adalah foto kondisi terakhir Dinas Perpustakaan dan Kearsipan Kabupaten Pamekasan:
         </p>
       </div>

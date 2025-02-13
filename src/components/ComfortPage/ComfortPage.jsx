@@ -109,17 +109,12 @@ const ComfortPage = () => {
 ]
   return (
     <section className="">
-      { questions.map((survey,index) => 
-        <div key={survey.id} className='py-2'>
-          <div className="d-flex gap-3 ms-1">
-            <p>
-              {index +1}
-            </p>
-          <p className="text-black">
-             {survey.question}
-          </p>
-          </div>
-
+      <h3 className="fw-bold text-center">Pleasure (kenyamanan)</h3>
+      <p className="text-center fw-normal mb-3">Pada sesi ini akan berfokus pada poin kenyamanan dari kondisi Dinas Perpustakaan dan Kearsipan Kabupaten Pamekasan, berdasar pernyataan dibawah ini pilihlah angka yang mewakili persepsi anda terhadap kenyamanan perpustakaan tersebut. </p>
+      { questions.map((survey) => 
+        <div key={survey.id} className='py-2 border-top mb-2'>
+          <p className="text-black">{survey.question}</p>
+          
           <div className="col-12 mb-2 row px-3">
             <div className="form-check">
               <input className="form-check-input" name={survey.id} type="radio" value={1} onClick={ handleChange }></input>
