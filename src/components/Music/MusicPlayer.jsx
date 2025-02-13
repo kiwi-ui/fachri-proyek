@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { BsPlayCircleFill, BsPauseCircleFill} from 'react-icons/bs';
 import song from '../../assets/bgmusic.mp3';
-import { BsPlayCircle } from "react-icons/bs";
 
 const MusicPlayer = () => {
     const audioRef = useRef(new Audio(song));
