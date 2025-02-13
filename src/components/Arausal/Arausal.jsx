@@ -81,11 +81,16 @@ const Arausal = () => {
 ]
   return (
     <section className="">
-      { questions.map(survey => 
+      { questions.map((survey, index) => 
         <div key={survey.id} className='py-2'>
+          <div className="d-flex gap-3 ms-1">
+            <p>
+              {index +1}
+            </p>
           <p className="text-black">
-            {survey.question}
+             {survey.question}
           </p>
+          </div>
 
           <div className="col-12 mb-2 row px-3">
             <div className="form-check">
