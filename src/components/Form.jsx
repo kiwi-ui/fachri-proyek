@@ -8,7 +8,7 @@ import DominancePage from './DominancePage/DominancePage';
 import style from './style.module.css';
 import Music from './Music/MusicPlayer';
 
-  const Form = () => {
+const Form = () => {
     const [formData, setFormData] = useState({
         nama: '',
         umur: '',
@@ -61,15 +61,16 @@ import Music from './Music/MusicPlayer';
         DominanceHirarkiVisual: '',
         DominanceAreaPersonal: '',
         DominancePencahayaan: '',
-        DominanceLanggam: ''
+        DominanceLanggam: '',
+        PAD: ''
     });
 
     const [emptyFields, setEmptyFields] = useState([]);
-
     const [currentPage, setCurrentPage] = useState(0);
     const [isInputEmpty, setIsInputEmpty] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false); 
+    
     const validateForm = () => {
         const emptyInputs = Object.keys(formData).filter(key => formData[key] === '');
         
@@ -77,6 +78,7 @@ import Music from './Music/MusicPlayer';
     
         return emptyInputs.length === 0; // Return true jika semua terisi, false jika ada yang kosong
     };
+
     const handleChange = (e) => {
         const {name, value} = e.target;
         setFormData((prevData) => ({
@@ -105,14 +107,15 @@ import Music from './Music/MusicPlayer';
 
     const handleSubmit = async (event) =>  {
         event.preventDefault();
+        
         const url = 'https://script.google.com/macros/s/AKfycbx2OVLht0TqIGKtu7jkE-snVFix1GmoJfP9Un-TgM-QFfloD4P7jILd5D4rek4_HmSj/exec';
         const form = document.getElementById('form');
         const CompleteformData = new FormData();
         Object.entries(formData).forEach(([key, value]) => {
             CompleteformData.append(key, value);
         })
+
         if (!validateForm()) {
-            // alert(`Harap isi semua kolom berikut:${emptyFields.join(', ')}`);
             alert('Masih ada yang belum terisi')
             console.log(emptyFields)
             return;
@@ -151,8 +154,7 @@ import Music from './Music/MusicPlayer';
                         { currentPage ==1 && <Biodata /> }
                         { currentPage == 2 && <ComfortPage /> }
                         { currentPage == 3 && <Arausal /> }
-                        { currentPage == 4 && <DominancePage /> }
-                        
+                        { currentPage == 4 && <DominancePage /> }                    
                     </form>
 
                     <div className={`d-flex px-1 pt-4 ${currentPage === 0 ? 'justify-content-center' : 'justify-content-between' }`}>
@@ -166,7 +168,7 @@ import Music from './Music/MusicPlayer';
                                 { isSuccess && <p className="position-relative bg-text-primary">Berhasil</p> }
                             </div> 
                                 : 
-                            <a className={`btn ${style.glass} text-black px-3 fw-semibold`} role="button" onClick={ handleNextPages }>{currentPage === 0 ? 'Mulai Survey' : 'Selanjutnya'}</a>
+                            <a className={ `btn ${style.glass} text-black px-3 fw-semibold` } role="button" onClick={ handleNextPages }>{currentPage === 0 ? 'Mulai Survey' : 'Selanjutnya'}</a>
                         }
                     </div>
                     <Music />
