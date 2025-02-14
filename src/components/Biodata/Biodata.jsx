@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import FormContext from '../../context/FormContext'
 
 const Biodata = () => {
-    const {setFormData, formData, currentPage, handleChange, isInputEmpty} = useContext(FormContext);
+    const {formData, handleChange, isInputEmpty} = useContext(FormContext);
     
     return (
         <section className="">

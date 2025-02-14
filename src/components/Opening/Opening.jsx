@@ -1,5 +1,3 @@
-import { useContext } from 'react';
-import FormContext from '../../context/FormContext';
 import satu from '../../assets/1.webp';
 import dua from '../../assets/2.webp';
 import tiga from '../../assets/3.webp';
@@ -55,10 +53,9 @@ const Opening = () => {
     },
 
   ]
-  const {setFormData, formData, currentPage} = useContext(FormContext);
   return (
     <section className="">
-      <div  className="container">
+      <div  className="">
         <p className="fs-1 fw-bold text-center">KUISIONER PENELITIAN</p>
         <p className="fs-5 fw-semibold text-center border-top border-bottom py-2">“ANALISIS TINGKAT ADAPTASI PENGUNJUNG GENERASI Z TERHADAP KUALITAS ELEMEN INTERIOR GEDUNG DINAS PERPUSTAKAAN DAN KEARSIPAN KABUPATEN”</p>
         <p className='text-center border-bottom pb-2'>
@@ -66,11 +63,14 @@ const Opening = () => {
         </p>
       </div>
       <div className="row">
-        {imgs.map((image, index) => 
+        {imgs.map((image) => 
           <div key={image.id} className="col-6 gap-2">
             <img src={image.url} alt='img' className="w-100 mb-3" />
           </div>
         )}
+      </div>
+      <div className='text-center'>
+        <p>Isilah kusioner ini dengan jujur dan apa adanya, jangan lupa membaca arahan terlebih dahulu disetiap sesinya. Saya Achmad Fachriali Mulyadi S.Ds, selaku peneliti mengucapkan terima kasih banyak kepada anda yang sudah mengisi kusioner ini.</p>
       </div>
     </section>
   )

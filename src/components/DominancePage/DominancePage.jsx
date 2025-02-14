@@ -29,18 +29,14 @@ const DominancePage = () => {
     {
       id: 'DominanceLanggam',
       question: 'Dengan kondisi langgam pada perpustakaan ini saya akan mengunjungi kembali perpustakaan ini.'
-    },
-    {
-      id: 'PAD',
-      question: 'Berdasarkan pertanyaan sebelumnya deskripsikan gambaran bagaimana kualitas elemeen interior perpustakaan ini memberi rasa nyaman, membuat anda bersemangat dan bekeinginan untuk kembali lagi menurut pendapat dan keinginan anda.'
     }
 ]
   return (
     <section className="px-3">
-      <h3 className="fw-bold text-center">Domminance (Perilaku)</h3>
+      <h3 className="fw-bold text-center mb-3">Domminance (Perilaku)</h3>
       <p className="text-center fw-normal mb-3">Pada sesi ini akan berfokus pada poin perilaku dari kondisi Dinas Perpustakaan dan Kearsipan Kabupaten Pamekasan, berdasar pernyataan dibawah ini pilihlah angka yang mewakili persepsi anda terhadap perilaku perpustakaan tersebut. </p>
         { questions.map((survey) => 
-          <div key={survey.id} className='py-2 border-top mb-2'>
+          <div key={survey.id} className='py-3 border-top border-black'>
             <p className="text-black">
               {survey.question}
             </p>
@@ -66,9 +62,9 @@ const DominancePage = () => {
           </div>
         )}
         
-      <div className="form-floating mb-4">
-        <p>{ questions[questions.length-1].question }</p>
-        <textarea className="form-control" style={{height: '100px'}} name={ questions[questions.length-1].id } onChange={ handleChange }></textarea>
+      <div className="form-floating mb-4 border-top border-black py-3">
+        <p>Berdasarkan pertanyaan sebelumnya deskripsikan gambaran bagaimana kualitas elemeen interior perpustakaan ini memberi rasa nyaman, membuat anda bersemangat dan bekeinginan untuk kembali lagi menurut pendapat dan keinginan anda.</p>
+        <textarea className="form-control py-2" style={{height: '100px'}} name="PAD" onChange={ handleChange }></textarea>
       </div>
       
     </section>
