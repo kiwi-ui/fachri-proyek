@@ -65,7 +65,7 @@ const Opening = () => {
       <div className="row">
         {imgs.map((image) => 
           <div key={image.id} className="col-6 gap-2">
-            <img src={image.url} alt='img' className="w-100 mb-3" />
+            <img src={image.url} alt='img' className="w-100 mb-3 shadow-sm" />
           </div>
         )}
       </div>
