@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import FormContext from '../../context/FormContext';
 
 const Arausal = () => {
-  const {setFormData, formData, currentPage, handleChange} = useContext(FormContext);
+  const { handleChange } = useContext(FormContext);
 
   const questions = [
     {
@@ -16,7 +16,7 @@ const Arausal = () => {
     },
     {
       id: 'ArausalLayout3',
-      question: 'Layout perpustakaan ini membuat saya bergerak lebih mudah saya berpindah dari satu area ke area lain'
+      question: 'Layout perpustakaan ini membuat saya bergerak lebih mudah saat berpindah dari satu area ke area lain'
     },
     {
       id: 'ArausalVariasiJenisRuang1',
@@ -28,7 +28,7 @@ const Arausal = () => {
     },
     {
       id: 'ArausalVariasiJenisRuang3',
-      question: 'Keberadaan ruang yang bervariasi membuat saya lebih prosuktif dalam mengerjakan tugas dengan suasana yang sesuai kebutuhan.'
+      question: 'Keberadaan ruang yang bervariasi membuat saya lebih produktif dalam mengerjakan tugas dengan suasana yang sesuai kebutuhan.'
     },
     {
       id: 'ArausalHirarkiVisual1',
@@ -52,7 +52,7 @@ const Arausal = () => {
     },
     {
       id: 'ArausalAreaPersonal3',
-      question: 'Saya merasa lebih produktif ketika berada di area privasi yang memungkinkan saya bekrja dengan tenang.'
+      question: 'Saya merasa lebih produktif ketika berada di area privasi yang memungkinkan saya bekerja dengan tenang.'
     },
     {
       id: 'ArausalPencahayaan1',
@@ -64,7 +64,7 @@ const Arausal = () => {
     },
     {
       id: 'ArausalPencahayaan3',
-      question: 'Cahaya yang ada di perpustakaan ini membuat saya lebih berenergi dan prosuktif dalam bekerja.'
+      question: 'Cahaya yang ada di perpustakaan ini membuat saya lebih berenergi dan produktif dalam bekerja.'
     },
     {
       id: 'ArausalLanggam1',

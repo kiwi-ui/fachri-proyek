@@ -1,9 +1,8 @@
-import React from 'react'
 import { useContext } from 'react';
 import FormContext from '../../context/FormContext';
 
 const ComfortPage = () => {
-  const {setFormData, formData, currentPage, handleChange} = useContext(FormContext);
+  const { handleChange } = useContext(FormContext);
 
   const questions = [
     {
@@ -24,7 +23,7 @@ const ComfortPage = () => {
     },
     {
       id: 'VariasiJenisRuang1',
-      question: 'Saya menjadi lebih mudah berkegiatan dengan variasi ruang yang diberikan olehh perpustakaan ini.'
+      question: 'Saya menjadi lebih mudah berkegiatan dengan variasi ruang yang diberikan oleh perpustakaan ini.'
     },
     {
       id: 'VariasiJenisRuang2',

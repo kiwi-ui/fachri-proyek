@@ -1,9 +1,8 @@
-import React from 'react'
 import { useContext } from 'react';
 import FormContext from '../../context/FormContext';
 
 const DominancePage = () => {
-  const {setFormData, formData, currentPage, handleChange} = useContext(FormContext);
+  const { handleChange } = useContext(FormContext);
 
   const questions = [
     {

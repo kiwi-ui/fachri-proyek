@@ -55,11 +55,16 @@ const Opening = () => {
   ]
   return (
     <section className="">
-      <div  className="">
+      <div className="">
         <p className="fs-1 fw-bold text-center">KUISIONER PENELITIAN</p>
         <p className="fs-5 fw-semibold text-center border-top border-bottom py-2">“ANALISIS TINGKAT ADAPTASI PENGUNJUNG GENERASI Z TERHADAP KUALITAS ELEMEN INTERIOR GEDUNG DINAS PERPUSTAKAAN DAN KEARSIPAN KABUPATEN”</p>
         <p className='text-center border-bottom pb-2'>
-          Dinas Perpustakaan dan Kearsipan Kabupaten Pamekasan adalah perpustakaan pertama di Kabupaten Pamekasan, berdiri pada tahun 1986 yang kemudian mendapat renovasi pada tahun 2008. Sebagai Lembaga satu-satunya yang bergerak di bidang perpustakaan dan kearsipan Dinas perpustakaan dan Kearsipan Kabupaten Pamekasan mengalami penurunan pengunjung dari 66.307 pada tahun 2022 ke 39.721 pada tahun 2023 (Diskominfo, 2023). Hingga bulan maret 2023 gedung fasilitas utama Dinas Perpustakaan dan Kearsipan Kabupaten Pamekasan mengalami re-desain secara total. Berikut adalah foto kondisi terakhir Dinas Perpustakaan dan Kearsipan Kabupaten Pamekasan:
+          Dinas Perpustakaan dan Kearsipan Kabupaten Pamekasan adalah 
+          perpustakaan pertama di Kabupaten Pamekasan, 
+          berdiri pada tahun 1986 yang kemudian mendapat renovasi pada tahun 2008. 
+          Sebagai Lembaga satu-satunya yang bergerak dibidang perpustakaan, 
+          Dinas perpustakaan dan kearsipan Kabupaten Pamekasan mengalami penurunan pengunjung dari 66.307 pada tahun 2022 ke 39.721 pada tahun 2023 (Diskominfo, 2023). 
+          Hingga bulan maret 2023 gedung fasilitas utama Dinas Perpustakaan dan Kearsipan Kabupaten Pamekasan mengalami re-desain secara total. Berikut adalah foto kondisi terakhir Dinas Perpustakaan dan Kearsipan Kabupaten Pamekasan:
         </p>
       </div>
       <div className="row">
@@ -70,7 +75,9 @@ const Opening = () => {
         )}
       </div>
       <div className='text-center'>
-        <p>Isilah kusioner ini dengan jujur dan apa adanya, jangan lupa membaca arahan terlebih dahulu disetiap sesinya. Saya Achmad Fachriali Mulyadi S.Ds, selaku peneliti mengucapkan terima kasih banyak kepada anda yang sudah mengisi kusioner ini.</p>
+        <p>Isilah kusioner ini dengan jujur dan apa adanya, 
+          jangan lupa membaca arahan terlebih dahulu disetiap sesinya. 
+          Saya Achmad Fachriali Mulyadi S.Ds, selaku peneliti mengucapkan terima kasih banyak kepada anda yang sudah mengisi kusioner ini.</p>
       </div>
     </section>
   )
