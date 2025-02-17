@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import FormContext from '../../context/FormContext';
 
 const ComfortPage = () => {
-  const { handleChange } = useContext(FormContext);
+  const { handleChange, formData } = useContext(FormContext);
 
   const questions = [
     {
@@ -43,7 +43,7 @@ const ComfortPage = () => {
     },
     {
       id: 'HirarkiVisual3',
-      question: 'Saya merasanya nyaman berkegiatan dengan adanya hirarki visual perpustakaan.'
+      question: 'Saya merasa nyaman berkegiatan dengan adanya hirarki visual perpustakaan.'
     },
     {
       id: 'HirarkiVisual4',
@@ -51,11 +51,11 @@ const ComfortPage = () => {
     },
     {
       id: 'AreaPersonal1',
-      question: 'Saya merasanya nyaman berkegiatan dengan adanya area personal perpustakaan.'
+      question: 'Saya merasa nyaman berkegiatan dengan adanya area personal perpustakaan.'
     },
     {
       id: 'AreaPersonal2',
-      question: 'Saya merasanya rileks berkegiatan dengan adanya area personal perpustakaan.'
+      question: 'Saya merasa rileks berkegiatan dengan adanya area personal perpustakaan.'
     },
     {
       id: 'AreaPersonal3',
@@ -71,11 +71,11 @@ const ComfortPage = () => {
     },
     {
       id: 'Pencahayaan1',
-      question: 'Saya merasanya nyaman berkegiatan dengan adanya pencahayaan perpustakaan.'
+      question: 'Saya merasa nyaman berkegiatan dengan adanya pencahayaan perpustakaan.'
     },
     {
       id: 'Pencahayaan2',
-      question: 'Saya merasanya rileks berkegiatan dengan adanya pencahayaan perpustakaan.'
+      question: 'Saya merasa rileks berkegiatan dengan adanya pencahayaan perpustakaan.'
     },
     {
       id: 'Pencahayaan3',
@@ -87,11 +87,11 @@ const ComfortPage = () => {
     },
     {
       id: 'Langgam1',
-      question: 'Saya merasanya nyaman berkegiatan dengan adanya langgam perpustakaan.'
+      question: 'Saya merasa nyaman berkegiatan dengan adanya langgam perpustakaan.'
     },
     {
       id: 'Langgam2',
-      question: 'Saya merasanya rileks berkegiatan dengan adanya langgam perpustakaan.'
+      question: 'Saya merasa rileks berkegiatan dengan adanya langgam perpustakaan.'
     },
     {
       id: 'Langgam3',
@@ -110,32 +110,30 @@ const ComfortPage = () => {
     <section className="">
       <h3 className="fw-bold text-center mb-3">Pleasure (kenyamanan)</h3>
       <p className="text-center fw-normal mb-3">Pada sesi ini akan berfokus pada poin kenyamanan dari kondisi Dinas Perpustakaan dan Kearsipan Kabupaten Pamekasan, berdasarkan pernyataan dibawah ini pilihlah angka yang mewakili persepsi anda terhadap kenyamanan perpustakaan tersebut. </p>
-      { questions.map((survey) => 
-        <div key={survey.id} className='py-3 border-top border-black'>
-          <p className="text-black">{survey.question}</p>
-          
-          <div className="col-12 mb-2 row px-3">
-            <div className="form-check">
-              <input className="form-check-input" name={survey.id} type="radio" value={1} onClick={ handleChange }></input>
-              <label className="form-check-label">Tidak setuju</label>
-            </div>
-            <div className="form-check">
-              <input className="form-check-input" name={survey.id} type="radio" value={2} onClick={ handleChange }></input>
-              <label className="form-check-label">Kurang setuju</label>
-            </div>
-            <div className="form-check">
-              <input className="form-check-input" name={survey.id} type="radio" value={3} onClick={ handleChange }></input>
-              <label className="form-check-label">setuju</label>
-            </div>
-            <div className="form-check">
-              <input className="form-check-input" name={survey.id} type="radio" value={4} onClick={ handleChange }></input>
-              <label className="form-check-label">Sangat setuju</label>
+        { questions.map((survey) => 
+          <div key={survey.id} className='py-3 border-top border-black'>
+            <p className="text-black">{survey.question}</p>
+            
+            <div className="col-12 mb-2 row px-3">
+              <div className="form-check">
+                <input className="form-check-input" name={survey.id} type="radio" value={1} onChange={ handleChange } checked={formData[survey.id] == 1}></input>
+                <label className="form-check-label">Tidak setuju</label>
+              </div>
+              <div className="form-check">
+                <input className="form-check-input" name={survey.id} type="radio" value={2} onChange={ handleChange } checked={formData[survey.id] == 2}></input>
+                <label className="form-check-label">Kurang setuju</label>
+              </div>
+              <div className="form-check">
+                <input className="form-check-input" name={survey.id} type="radio" value={3} onChange={ handleChange } checked={formData[survey.id] == 3}></input>
+                <label className="form-check-label">setuju</label>
+              </div>
+              <div className="form-check">
+                <input className="form-check-input" name={survey.id} type="radio" value={4} onChange={ handleChange } checked={formData[survey.id] == 4}></input>
+                <label className="form-check-label">Sangat setuju</label>
+              </div>
             </div>
           </div>
-        </div>
-
-      )}
-      
+        )}
     </section>
   )
 }

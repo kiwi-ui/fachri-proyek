@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import FormContext from '../../context/FormContext';
 
 const DominancePage = () => {
-  const { handleChange } = useContext(FormContext);
+  const { handleChange, formData } = useContext(FormContext);
 
   const questions = [
     {
@@ -42,19 +42,19 @@ const DominancePage = () => {
 
             <div className="col-12 mb-2 row px-3">
               <div className="form-check">
-                <input className="form-check-input" name={survey.id} type="radio" value={1} onClick={ handleChange }></input>
+                <input className="form-check-input" name={survey.id} type="radio" value={1} onChange={ handleChange } checked={ formData[survey.id] == 1 }></input>
                 <label className="form-check-label">Tidak setuju</label>
               </div>
               <div className="form-check">
-                <input className="form-check-input" name={survey.id} type="radio" value={2} onClick={ handleChange }></input>
+                <input className="form-check-input" name={survey.id} type="radio" value={2} onChange={ handleChange } checked={ formData[survey.id] == 2 }></input>
                 <label className="form-check-label">Kurang setuju</label>
               </div>
               <div className="form-check">
-                <input className="form-check-input" name={survey.id} type="radio" value={3} onClick={ handleChange }></input>
+                <input className="form-check-input" name={survey.id} type="radio" value={3} onChange={ handleChange } checked={ formData[survey.id] == 3 }></input>
                 <label className="form-check-label">setuju</label>
               </div>
               <div className="form-check">
-                <input className="form-check-input" name={survey.id} type="radio" value={4} onClick={ handleChange }></input>
+                <input className="form-check-input" name={survey.id} type="radio" value={4} onChange={ handleChange } checked={ formData[survey.id] == 4 }></input>
                 <label className="form-check-label">Sangat setuju</label>
               </div>
             </div>
