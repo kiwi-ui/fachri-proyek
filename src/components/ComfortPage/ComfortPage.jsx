@@ -109,7 +109,7 @@ const ComfortPage = () => {
   return (
     <section className="">
       <h3 className="fw-bold text-center mb-3">Pleasure (kenyamanan)</h3>
-      <p className="text-center fw-normal mb-3">Pada sesi ini akan berfokus pada poin kenyamanan dari kondisi Dinas Perpustakaan dan Kearsipan Kabupaten Pamekasan, berdasar pernyataan dibawah ini pilihlah angka yang mewakili persepsi anda terhadap kenyamanan perpustakaan tersebut. </p>
+      <p className="text-center fw-normal mb-3">Pada sesi ini akan berfokus pada poin kenyamanan dari kondisi Dinas Perpustakaan dan Kearsipan Kabupaten Pamekasan, berdasarkan pernyataan dibawah ini pilihlah angka yang mewakili persepsi anda terhadap kenyamanan perpustakaan tersebut. </p>
       { questions.map((survey) => 
         <div key={survey.id} className='py-3 border-top border-black'>
           <p className="text-black">{survey.question}</p>

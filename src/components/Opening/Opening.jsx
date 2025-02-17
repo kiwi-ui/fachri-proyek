@@ -64,7 +64,7 @@ const Opening = () => {
           berdiri pada tahun 1986 yang kemudian mendapat renovasi pada tahun 2008. 
           Sebagai Lembaga satu-satunya yang bergerak dibidang perpustakaan, 
           Dinas perpustakaan dan kearsipan Kabupaten Pamekasan mengalami penurunan pengunjung dari 66.307 pada tahun 2022 ke 39.721 pada tahun 2023 (Diskominfo, 2023). 
-          Hingga bulan maret 2023 gedung fasilitas utama Dinas Perpustakaan dan Kearsipan Kabupaten Pamekasan mengalami re-desain secara total. Berikut adalah foto kondisi terakhir Dinas Perpustakaan dan Kearsipan Kabupaten Pamekasan:
+          Hingga bulan Maret 2023 gedung fasilitas utama Dinas Perpustakaan dan Kearsipan Kabupaten Pamekasan mengalami re-desain secara total. Berikut adalah foto kondisi terakhir Dinas Perpustakaan dan Kearsipan Kabupaten Pamekasan:
         </p>
       </div>
       <div className="row">
